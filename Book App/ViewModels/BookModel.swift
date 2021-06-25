@@ -13,5 +13,6 @@ class BookModel: ObservableObject {
     
     init() {
         self.books = DataService.getLocalData()
+        //print(self.books[0].title)
     }
 }

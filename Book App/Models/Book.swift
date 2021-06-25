@@ -14,7 +14,7 @@ class Book: Identifiable, Decodable {
     var isFavourite:Bool
     var currentPage:Int
     var rating:Int
-    var id:UUID
+    var id:Int
     var content:[String]
     
 }

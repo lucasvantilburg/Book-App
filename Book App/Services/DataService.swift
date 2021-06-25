@@ -12,7 +12,7 @@ class DataService {
     //parse local json file
     static func getLocalData() -> [Book] {
         
-        let pathString = Bundle.main.path(forResource: "Data", ofType: "JSON")
+        let pathString = Bundle.main.path(forResource: "books", ofType: "json")
         
         guard pathString != nil else {
             return [Book]()
