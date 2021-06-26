@@ -11,6 +11,8 @@ struct BookDetailView: View {
     
     @EnvironmentObject var model:BookModel
     @ObservedObject var book:Book
+    @State var isFavourite:Bool
+    
 
     
     var body: some View {
@@ -48,12 +50,14 @@ struct BookDetailView: View {
                         .padding(.bottom, 10)
                     
                     Button(action: {
-                        //book.isFavourite.toggle()
-                        model.books[book.id-1].isFavourite.toggle()
+                        book.isFavourite.toggle()
+                        //model.books[book.id-1].isFavourite.toggle()
+                        isFavourite.toggle()
+                        print(isFavourite)
                         print(book.isFavourite)
                         print(model.books[book.id-1].isFavourite)
                     }, label: {
-                        Image(systemName: model.books[book.id-1].isFavourite ? "star" : "star.fill")
+                        Image(systemName: isFavourite ? "star.fill" : "star")
                             .resizable()
                             .foregroundColor(.yellow)
                             .scaledToFit()
@@ -91,7 +95,8 @@ struct BookDetailView: View {
 
 struct BookDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        BookDetailView(book: BookModel().books[4])
+        BookDetailView(book: BookModel().books[4], isFavourite: false)
+            .environmentObject(BookModel())
             
     }
 }

@@ -26,7 +26,7 @@ struct BookListView: View {
                             ForEach (model.books) { b in
                                 
                                 NavigationLink(
-                                    destination: BookDetailView(book: b),
+                                    destination: BookDetailView(book: b, isFavourite: b.isFavourite),
                                     label: {
                                         ZStack {
                                             Rectangle()
@@ -45,7 +45,7 @@ struct BookListView: View {
                                                             .font(Font.custom("Avenir", size: 14))
                                                     }
                                                     if (b.isFavourite) {
-                                                        Image(systemName: "star")
+                                                        Image(systemName: "star.fill")
                                                             .resizable()
                                                             .foregroundColor(.yellow)
                                                             .scaledToFit()
