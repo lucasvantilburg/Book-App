@@ -16,6 +16,7 @@
 		BE042CEC26855B8200CE3917 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE042CEB26855B8200CE3917 /* BookModel.swift */; };
 		BE042CEE26855BD700CE3917 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE042CED26855BD700CE3917 /* DataService.swift */; };
 		BE042CF0268575DB00CE3917 /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE042CEF268575DB00CE3917 /* BookDetailView.swift */; };
+		BEC6B69B2686CC37007F3634 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC6B69A2686CC37007F3634 /* PageView.swift */; };
 		BEE242D526859ABE0099DD2C /* BookCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE242D426859ABE0099DD2C /* BookCardView.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		BE042CEB26855B8200CE3917 /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		BE042CED26855BD700CE3917 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		BE042CEF268575DB00CE3917 /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
+		BEC6B69A2686CC37007F3634 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		BEE242D426859ABE0099DD2C /* BookCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 				BE042CD326853F9B00CE3917 /* BookListView.swift */,
 				BE042CEF268575DB00CE3917 /* BookDetailView.swift */,
 				BEE242D426859ABE0099DD2C /* BookCardView.swift */,
+				BEC6B69A2686CC37007F3634 /* PageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE042CD426853F9B00CE3917 /* BookListView.swift in Sources */,
+				BEC6B69B2686CC37007F3634 /* PageView.swift in Sources */,
 				BE042CD226853F9B00CE3917 /* Book_AppApp.swift in Sources */,
 				BE042CEC26855B8200CE3917 /* BookModel.swift in Sources */,
 				BE042CEA26855A6F00CE3917 /* Book.swift in Sources */,

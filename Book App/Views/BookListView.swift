@@ -34,29 +34,40 @@ struct BookListView: View {
                                                 
                                             
                                             VStack (alignment: .leading, spacing:0) {
-                                                Text(b.title)
-                                                    .padding(.leading, 10)
-                                                    .font(Font.custom("Avenir Heavy", size: 24))
-                                                
-                                                Text(b.author)
-                                                    .padding(.leading, 10)
-                                                    .font(Font.custom("Avenir", size: 14))
+                                                HStack {
+                                                    VStack (alignment: .leading) {
+                                                        Text(b.title)
+                                                            .padding(.leading, geo.size.width/30)
+                                                            .font(Font.custom("Avenir Heavy", size: 24))
+                                                        
+                                                        Text(b.author)
+                                                            .padding(.leading, geo.size.width/30)
+                                                            .font(Font.custom("Avenir", size: 14))
+                                                    }
+                                                    if (b.isFavourite) {
+                                                        Image(systemName: "star")
+                                                            .resizable()
+                                                            .foregroundColor(.yellow)
+                                                            .scaledToFit()
+                                                    }
+                                                }
                                                 
                                                 Image("cover" + String(b.id))
                                                     .resizable()
                                                     .aspectRatio(contentMode: .fit)
                                                     .clipped()
-                                                    .padding([.leading, .trailing, .top], 10)
+                                                    .padding([.leading, .trailing], geo.size.width/30)
+                                                    .padding(.top, geo.size.height/40)
                                                 
                                             }
                                             .foregroundColor(.black)
                                             
                                         }
-                                        .frame(width: geo.size.width - 50, height: 600, alignment: .center)
+                                        .frame(width: geo.size.width/1.2, height: geo.size.height/1.3, alignment: .center)
                                         .cornerRadius(15)
                                         .shadow(color: Color(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.5), radius: 10, x: -5, y: 5)
                                     })
-                                    .padding(10)
+                                    .padding(geo.size.height/45)
                                     
                             }
                         }
@@ -66,6 +77,7 @@ struct BookListView: View {
             }
             .navigationBarTitle("My Library")
             .navigationBarHidden(true)
+            //.navigationBarTitleDisplayMode(.inline)
         }
         
     }
