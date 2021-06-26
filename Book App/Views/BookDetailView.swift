@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BookDetailView: View {
     
-    var book:Book
+    @State var book:Book
     
     var body: some View {
         GeometryReader { geo in
@@ -29,8 +29,24 @@ struct BookDetailView: View {
                 
                 VStack {
                     Text("Mark for later!")
+                        .padding(.bottom, 10)
+                    Image(systemName: "star")
+                        .foregroundColor(.yellow)
                 }
+                .frame(width: geo.size.width, height: geo.size.height - 450, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 
+                VStack {
+                    Text("Rate \(book.title)")
+                    Picker("", selection: $book.rating) {
+                        Text("1").tag(1)
+                        Text("2").tag(2)
+                        Text("3").tag(3)
+                        Text("4").tag(4)
+                        Text("5").tag(5)
+                        
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                }
             }
         }
         
